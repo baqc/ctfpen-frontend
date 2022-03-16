@@ -145,7 +145,7 @@ const menuOptions = [
   cursor: pointer;
 }
 
-@media screen and (max-width: $breakpoints-sm) {
+@media screen and (max-width: $breakpoints-md) {
   .navigation .menu {
     display: none;
   }
