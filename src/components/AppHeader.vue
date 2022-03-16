@@ -29,35 +29,67 @@ const dropdown_props = [
 const menuOptions = [
   {
     label: () => h(RouterLink, {
-      to: '/'
+      to: {
+        name: 'home'
+      }
     }, {default: () => '主页'}),
-    key: "hear-the-wind-sing",
+    key: "home",
     icon: renderIcon(HomeOutline),
   },
   {
     label: "排行榜",
-    key: "pinball-1973",
+    key: "rank",
     icon: renderIcon(BarChartOutline),
     children: [
       {
-        label: "鼠",
+        label: "TOP100",
         key: "rat"
+      },
+      {
+        label: "解题榜",
+        key: "rat2"
+      },
+      {
+        label: "出题榜",
+        key: "rat3"
       }
     ]
   },
   {
     label: "Challenges",
-    key: "a-wild-sheep-chase",
+    key: "challenges",
     icon: renderIcon(FootstepsOutline),
+    children: [
+      {
+        label: "WEB",
+        key: "WEB"
+      },
+      {
+        label: "Pwn",
+        key: "Pwn"
+      },
+      {
+        label: "Reverse",
+        key: "Reverse"
+      },
+      {
+        label: "Crypto",
+        key: "Crypto"
+      },
+      {
+        label: "Misc",
+        key: "Misc"
+      }
+    ]
   },
   {
     label: "资料库",
-    key: "a-wild-sheep-chase",
+    key: "knowledge",
     icon: renderIcon(GridOutline),
   },
   {
     label: "活动",
-    key: "a-wild-sheep-chase",
+    key: "activity",
     icon: renderIcon(HappyOutline),
   },
 ];
@@ -68,7 +100,7 @@ const menuOptions = [
     <div class="navigation">
       <div class="menu_icon">
         <n-dropdown :options="dropdown_props" :show-arrow="true" trigger="click">
-          <n-button  large text>
+          <n-button large text>
             <template v-slot:icon>
               <n-icon size="26">
                 <menu-outline/>
@@ -80,11 +112,10 @@ const menuOptions = [
 
       <h3 class="title">CTF Pen</h3>
       <n-menu
-          v-model:dropdown-props="dropdown_props"
           v-model:options="menuOptions"
           class="menu"
-          dropdown-placement="top-start"
           mode="horizontal"
+          value="home"
       ></n-menu>
 
       <div class="action">

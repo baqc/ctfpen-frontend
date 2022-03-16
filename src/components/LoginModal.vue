@@ -1,5 +1,5 @@
 <script setup>
-  import {NModal,NSpin,NCard,NInput,NButton,NIcon,NGrid,NGi,NCheckbox} from "naive-ui";
+  import {NModal,NCard,NInput,NButton,NIcon,NGrid,NGi,NCheckbox} from "naive-ui";
   import {ref} from "vue";
   import {FingerPrintSharp,Person} from '@vicons/ionicons5';
   const showModal = ref(false);
