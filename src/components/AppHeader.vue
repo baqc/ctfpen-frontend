@@ -73,9 +73,20 @@ const menuOptions = [
     icon: renderIcon(GridOutline),
   },
   {
-    label: "活动",
+    label: "活动(测试工具)",
     key: "activity",
     icon: renderIcon(HappyOutline),
+    children: [
+      {
+        label: () => h(RouterLink, {
+          to: {
+            name: 'account'
+          }
+        }, {default: () => '用户中心'}),
+        key: "account",
+        icon: renderIcon(HomeOutline),
+      },
+    ]
   },
 ];
 const name = ref(router.currentRoute.value.name);

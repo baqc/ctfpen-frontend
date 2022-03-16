@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import NotFoundView from "@/views/NotFoundView.vue";
 const HomeView = () => import ('@/views/HomeView.vue');
 const KnowLedgeView = () => import ('@/views/KnowLedgeView.vue');
+const AccountView = () => import ('@/views/AccountView.vue');
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 
 export const loadingBarApiRef = {}
@@ -14,7 +15,7 @@ const router = createRouter({
       component: DefaultLayout,
       children: [
         {
-          path: '/',
+          path: '',
           name: 'home',
           component: HomeView,
           meta: {
@@ -23,14 +24,23 @@ const router = createRouter({
           }
         },
         {
-          path: '/knowledge',
+          path: 'knowledge',
           name: 'knowledge',
           component: KnowLedgeView,
           meta: {
             title: '资料库',
             auth: false
           }
-        }
+        },
+        {
+          path: 'account',
+          name: 'account',
+          component: AccountView,
+          meta: {
+            title: '用户中心',
+            auth: true
+          }
+        },
       ]
     },
     {
@@ -45,7 +55,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title;
+  document.title = to.meta.title + " | CTFPen";
   if (loadingBarApiRef.value) {
     loadingBarApiRef.value.start()
   }
