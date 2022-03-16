@@ -1,3 +1,9 @@
+<script setup>
+import {NAlert, NCard, NGi, NGrid, NIcon, useLoadingBar} from 'naive-ui';
+import {Airplane} from '@vicons/ionicons5';
+useLoadingBar().start();
+</script>
+
 <template>
   <div>
     <n-alert title="Default 类型" type="error">
@@ -33,11 +39,6 @@
     </n-grid>
   </div>
 </template>
-
-<script setup>
-import {NAlert, NCard, NGi, NGrid, NIcon} from 'naive-ui';
-import {Airplane} from '@vicons/ionicons5';
-</script>
 
 <style scoped>
 
