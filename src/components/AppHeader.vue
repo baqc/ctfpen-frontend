@@ -1,30 +1,11 @@
 <script setup>
 import {NButton, NButtonGroup, NDropdown, NIcon, NLayoutHeader, NMenu} from "naive-ui";
-import {h} from "vue";
+import {h, ref} from "vue";
 import {BookOutline, MenuOutline,BarChartOutline,HomeOutline,FootstepsOutline,GridOutline,HappyOutline} from "@vicons/ionicons5";
 import renderIcon from "../utils/renderIcon";
 import {RouterLink} from 'vue-router';
 import LoginModal from "../components/LoginModal.vue";
-
-const dropdown_props = [
-  {
-    label: '滨海湾金沙，新加坡',
-    key: 'marina bay sands',
-    disabled: true
-  },
-  {
-    label: '布朗酒店，伦敦',
-    key: "brown's hotel, london"
-  },
-  {
-    label: '亚特兰蒂斯巴哈马，拿骚',
-    key: 'atlantis nahamas, nassau'
-  },
-  {
-    label: '比佛利山庄酒店，洛杉矶',
-    key: 'the beverly hills hotel, los angeles'
-  }
-]
+import router from "@/router";
 
 const menuOptions = [
   {
@@ -83,7 +64,11 @@ const menuOptions = [
     ]
   },
   {
-    label: "资料库",
+    label: () => h(RouterLink, {
+      to: {
+        name: 'knowledge'
+      }
+    }, {default: () => '资料库'}),
     key: "knowledge",
     icon: renderIcon(GridOutline),
   },
@@ -93,13 +78,19 @@ const menuOptions = [
     icon: renderIcon(HappyOutline),
   },
 ];
+const name = ref(router.currentRoute.value.name);
 </script>
 
 <template>
   <n-layout-header bordered>
     <div class="navigation">
       <div class="menu_icon">
-        <n-dropdown :options="dropdown_props" :show-arrow="true" trigger="click">
+        <n-dropdown
+            :options="menuOptions"
+            :show-arrow="true"
+            size="huge"
+            trigger="click"
+        >
           <n-button large text>
             <template v-slot:icon>
               <n-icon size="26">
@@ -115,7 +106,7 @@ const menuOptions = [
           v-model:options="menuOptions"
           class="menu"
           mode="horizontal"
-          value="home"
+          v-model:value="name"
       ></n-menu>
 
       <div class="action">

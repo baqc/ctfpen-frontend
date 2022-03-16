@@ -1,22 +1,11 @@
 <script setup>
-import {NLayout, NLayoutContent, NLayoutFooter,NLoadingBarProvider} from 'naive-ui'
-import AppHeader from "@/components/AppHeader.vue"
 import {RouterView} from 'vue-router'
+import {NLoadingBarProvider} from 'naive-ui';
 </script>
 
 <template>
   <n-loading-bar-provider>
-    <n-layout>
-      <app-header></app-header>
-      <n-layout-content content-style="background-color: #fafafc;min-height: 94vh!important">
-        <div class="container">
-          <router-view></router-view>
-        </div>
-      </n-layout-content>
-      <n-layout-footer style="background-color: red;padding: 10px;color: white;text-align: center;font-size: 24px">
-        footer
-      </n-layout-footer>
-    </n-layout>
+    <router-view></router-view>
   </n-loading-bar-provider>
 </template>
 

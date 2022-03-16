@@ -1,7 +1,15 @@
 <script setup>
 import {NAlert, NCard, NGi, NGrid, NIcon, useLoadingBar} from 'naive-ui';
 import {Airplane} from '@vicons/ionicons5';
-useLoadingBar().start();
+import {onMounted} from "vue";
+import {loadingBarApiRef} from "@/router";
+
+const loadingBar = useLoadingBar()
+
+onMounted(() => {
+  loadingBarApiRef.value = loadingBar;
+  loadingBar.finish();
+})
 </script>
 
 <template>
