@@ -4,6 +4,7 @@ import {h} from "vue";
 import {BookOutline, MenuOutline} from "@vicons/ionicons5";
 import renderIcon from "../utils/renderIcon";
 import {RouterLink} from 'vue-router';
+import LoginModal from "../components/LoginModal.vue";
 
 const dropdown_props = [
   {
@@ -65,15 +66,17 @@ const menuOptions = [
 <template>
   <n-layout-header bordered>
     <div class="navigation">
-      <n-dropdown :options="dropdown_props" :show-arrow="true" trigger="click">
-        <n-button class="menu_icon" large text>
-          <template v-slot:icon>
-            <n-icon size="20">
-              <menu-outline/>
-            </n-icon>
-          </template>
-        </n-button>
-      </n-dropdown>
+      <div class="menu_icon">
+        <n-dropdown :options="dropdown_props" :show-arrow="true" trigger="click">
+          <n-button  large text>
+            <template v-slot:icon>
+              <n-icon size="26">
+                <menu-outline/>
+              </n-icon>
+            </template>
+          </n-button>
+        </n-dropdown>
+      </div>
 
       <h3 class="title">CTF Pen</h3>
       <n-menu
@@ -104,13 +107,15 @@ const menuOptions = [
           </n-button>
         </n-button-group>
       </div>
+
+      <login-modal/>
     </div>
   </n-layout-header>
 </template>
 
 <style lang="scss" scoped>
 .navigation {
-  padding: 6px 12px;
+  padding: 6px 11px;
   user-select: none;
   text-align: center;
   display: flex;
