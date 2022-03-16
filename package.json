@@ -1,26 +1,28 @@
 {
-  "name": "ctfpen-frontend",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 5050",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
-  },
-  "dependencies": {
-    "@vicons/ionicons5": "^0.12.0",
-    "@vitejs/plugin-legacy": "^1.7.1",
-    "naive-ui": "^2.26.4",
-    "pinia": "^2.0.11",
-    "sass": "^1.49.9",
-    "unplugin-vue-components": "^0.18.0",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.12"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.2.2",
-    "eslint": "^8.5.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "vite": "^2.8.4"
-  }
+    "name": "ctfpen-frontend",
+    "version": "1.0.0",
+    "license": "GPL-3.0-or-later",
+    "author": "lixworth",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview --port 5050",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    },
+    "dependencies": {
+        "@vicons/ionicons5": "^0.12.0",
+        "@vitejs/plugin-legacy": "^1.7.1",
+        "naive-ui": "^2.26.4",
+        "pinia": "^2.0.11",
+        "sass": "^1.49.9",
+        "unplugin-vue-components": "^0.18.0",
+        "vue": "^3.2.31",
+        "vue-router": "^4.0.12"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^2.2.2",
+        "eslint": "^8.5.0",
+        "eslint-plugin-vue": "^8.2.0",
+        "vite": "^2.8.4"
+    }
 }
