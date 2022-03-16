@@ -4,6 +4,7 @@ import axios from "axios";
 
 axios.get('/api/StartCaptchaServlet.php').then((res) => {
   let data = res.data;
+  // eslint-disable-next-line no-undef
   initGeetest({
     // 以下配置参数来自服务端 SDK
     gt: data.gt,
@@ -16,7 +17,7 @@ axios.get('/api/StartCaptchaServlet.php').then((res) => {
     captchaObj.appendTo(".captcha");
     // 这里可以调用验证实例 captchaObj 的实例方法
   })
-}).catch(function (err) {
+}).catch(function () {
   window.alert("加载失败")
 })
 
