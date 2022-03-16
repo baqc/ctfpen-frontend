@@ -1,3 +1,9 @@
+<script setup>
+import {NLayout, NLayoutContent} from 'naive-ui'
+import AppHeader from "@/components/AppHeader.vue"
+import {RouterView} from 'vue-router'
+</script>
+
 <template>
   <n-layout>
     <app-header></app-header>
@@ -8,13 +14,6 @@
     </n-layout-content>
   </n-layout>
 </template>
-
-<script setup>
-import {NLayout, NLayoutContent} from 'naive-ui'
-import AppHeader from "./components/AppHeader.vue"
-import {RouterView} from 'vue-router'
-</script>
-
 
 <style lang="scss">
 @import "@/assets/layout.scss";
