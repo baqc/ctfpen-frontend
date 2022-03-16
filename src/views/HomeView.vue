@@ -1,15 +1,15 @@
 <template>
   <div>
     <n-alert title="Default 类型" type="error">
-      <template #icon>
+      <template v-slot:icon>
         <n-icon>
-          <airplane />
+          <airplane/>
         </n-icon>
       </template>
       天生我材必有用
     </n-alert>
 
-    <n-grid x-gap="12" :cols="4" style="padding-top: 10px">
+    <n-grid :cols="4" style="padding-top: 10px" x-gap="12">
       <n-gi>
         <n-card title="卡片">
           卡片内容
@@ -35,8 +35,8 @@
 </template>
 
 <script setup>
-import { NAlert,NGrid,NGi,NCard,NIcon } from 'naive-ui';
-import { Airplane } from '@vicons/ionicons5';
+import {NAlert, NCard, NGi, NGrid, NIcon} from 'naive-ui';
+import {Airplane} from '@vicons/ionicons5';
 </script>
 
 <style scoped>

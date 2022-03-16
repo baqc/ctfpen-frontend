@@ -1,9 +1,9 @@
 <script setup>
-import { NLayoutHeader,NButton,NButtonGroup,NDropdown,NIcon,NMenu } from "naive-ui";
-import { h } from "vue";
-import { BookOutline, MenuOutline } from "@vicons/ionicons5";
+import {NButton, NButtonGroup, NDropdown, NIcon, NLayoutHeader, NMenu} from "naive-ui";
+import {h} from "vue";
+import {BookOutline, MenuOutline} from "@vicons/ionicons5";
 import renderIcon from "../utils/renderIcon";
-import { RouterLink } from 'vue-router';
+import {RouterLink} from 'vue-router';
 
 const dropdown_props = [
   {
@@ -29,7 +29,7 @@ const menuOptions = [
   {
     label: () => h(RouterLink, {
       to: '/'
-    }, { default: () => '主页' }),
+    }, {default: () => '主页'}),
     key: "hear-the-wind-sing",
     icon: renderIcon(BookOutline),
   },
@@ -65,11 +65,11 @@ const menuOptions = [
 <template>
   <n-layout-header bordered>
     <div class="navigation">
-      <n-dropdown trigger="click" :options="dropdown_props" :show-arrow="true">
-        <n-button text large class="menu_icon">
-          <template #icon>
+      <n-dropdown :options="dropdown_props" :show-arrow="true" trigger="click">
+        <n-button class="menu_icon" large text>
+          <template v-slot:icon>
             <n-icon size="20">
-              <menu-outline />
+              <menu-outline/>
             </n-icon>
           </template>
         </n-button>
@@ -77,27 +77,27 @@ const menuOptions = [
 
       <h3 class="title">CTF Pen</h3>
       <n-menu
-        class="menu"
-        mode="horizontal"
-        dropdown-placement="top-start"
-        v-model:dropdown-props="dropdown_props"
-        v-model:options="menuOptions"
+          v-model:dropdown-props="dropdown_props"
+          v-model:options="menuOptions"
+          class="menu"
+          dropdown-placement="top-start"
+          mode="horizontal"
       ></n-menu>
 
       <div class="action">
         <n-button-group>
           <n-button color="#18a058">
-            <template #icon>
+            <template v-slot:icon>
               <n-icon>
-                <book-outline />
+                <book-outline/>
               </n-icon>
             </template>
             登录
           </n-button>
-          <n-button ghost color="#18a058" class="register-btn">
-            <template #icon>
+          <n-button class="register-btn" color="#18a058" ghost>
+            <template v-slot:icon>
               <n-icon>
-                <book-outline />
+                <book-outline/>
               </n-icon>
             </template>
             注册
@@ -108,7 +108,7 @@ const menuOptions = [
   </n-layout-header>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .navigation {
   padding: 6px 12px;
   user-select: none;
@@ -117,15 +117,18 @@ const menuOptions = [
   justify-content: space-between;
   align-items: center;
 }
+
 .navigation .title {
   margin: 8px;
   text-align: left;
   flex: 1;
   justify-content: flex-start;
 }
+
 .navigation .menu {
   justify-content: center;
 }
+
 .navigation .action {
   flex: 1;
   display: flex;
@@ -136,6 +139,7 @@ const menuOptions = [
   font-size: 14px;
   cursor: pointer;
 }
+
 @media screen and (max-width: $breakpoints-sm) {
   .navigation .menu {
     display: none;
@@ -147,6 +151,7 @@ const menuOptions = [
     display: none;
   }
 }
+
 @media screen and (min-width: $breakpoints-md) {
   .navigation .menu_icon {
     display: none;

@@ -10,9 +10,9 @@
 </template>
 
 <script setup>
-import { NLayout, NLayoutContent } from 'naive-ui'
+import {NLayout, NLayoutContent} from 'naive-ui'
 import AppHeader from "./components/AppHeader.vue"
-import { RouterView } from 'vue-router'
+import {RouterView} from 'vue-router'
 </script>
 
 
