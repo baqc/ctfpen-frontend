@@ -13,7 +13,7 @@ import {RouterView} from 'vue-router'
           <router-view></router-view>
         </div>
       </n-layout-content>
-      <n-layout-footer style="background-color: red">
+      <n-layout-footer style="background-color: red;padding: 10px;color: white;text-align: center;font-size: 24px">
         footer
       </n-layout-footer>
     </n-layout>

@@ -2,12 +2,16 @@
   import {NModal,NCard,NInput,NButton,NIcon,NGrid,NGi} from "naive-ui";
   import {ref} from "vue";
   import {FingerPrintSharp,Person} from '@vicons/ionicons5';
-  const showModal = ref(true);
+  const showModal = ref(false);
+  import {LogIn} from "@vicons/ionicons5";
 </script>
 
 <template>
-  <n-button v-on:click="showModal = true">
-    来吧
+  <n-button color="#18a058" v-on:click="showModal = true">
+    <template v-slot:icon>
+      <n-icon :component="LogIn"></n-icon>
+    </template>
+    登录
   </n-button>
   <n-modal v-model:show="showModal" transform-origin="center">
     <n-card
@@ -46,5 +50,6 @@
 <style scoped>
 .login_card {
   width: 380px;
+  margin-top: 70px;
 }
 </style>

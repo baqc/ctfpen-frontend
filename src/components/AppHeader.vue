@@ -89,14 +89,7 @@ const menuOptions = [
 
       <div class="action">
         <n-button-group>
-          <n-button color="#18a058">
-            <template v-slot:icon>
-              <n-icon>
-                <book-outline/>
-              </n-icon>
-            </template>
-            登录
-          </n-button>
+          <login-modal/>
           <n-button class="register-btn" color="#18a058" ghost>
             <template v-slot:icon>
               <n-icon>
@@ -108,7 +101,6 @@ const menuOptions = [
         </n-button-group>
       </div>
 
-      <login-modal/>
     </div>
   </n-layout-header>
 </template>
