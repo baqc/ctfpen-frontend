@@ -1,0 +1,30 @@
+name: Build And Deploy
+
+on: 
+  push:
+    branches: [master]
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm install -g yarn 
+      - run: yarn install
+      - run: yarn run build
+      - name: Deploy to Server
+        uses: hengkx/ssh-deploy@v1.0.1
+        with:
+          USERNAME: ${{ secrets.DELOY_USERNAME }}
+          PASSWORD: ${{ secrets.DELOY_PASSWORD }}
+          HOST: ${{ secrets.DELOY_HOST }}
+          SOURCE: 'dist'
+          TARGET: ${{ secrets.DELOY_TARGET }}
