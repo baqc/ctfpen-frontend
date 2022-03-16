@@ -1,7 +1,7 @@
 <script setup>
 import {NButton, NButtonGroup, NDropdown, NIcon, NLayoutHeader, NMenu} from "naive-ui";
 import {h} from "vue";
-import {BookOutline, MenuOutline} from "@vicons/ionicons5";
+import {BookOutline, MenuOutline,BarChartOutline,HomeOutline,FootstepsOutline,GridOutline,HappyOutline} from "@vicons/ionicons5";
 import renderIcon from "../utils/renderIcon";
 import {RouterLink} from 'vue-router';
 import LoginModal from "../components/LoginModal.vue";
@@ -32,12 +32,12 @@ const menuOptions = [
       to: '/'
     }, {default: () => '主页'}),
     key: "hear-the-wind-sing",
-    icon: renderIcon(BookOutline),
+    icon: renderIcon(HomeOutline),
   },
   {
     label: "排行榜",
     key: "pinball-1973",
-    icon: renderIcon(BookOutline),
+    icon: renderIcon(BarChartOutline),
     children: [
       {
         label: "鼠",
@@ -48,17 +48,17 @@ const menuOptions = [
   {
     label: "Challenges",
     key: "a-wild-sheep-chase",
-    icon: renderIcon(BookOutline),
+    icon: renderIcon(FootstepsOutline),
   },
   {
     label: "资料库",
     key: "a-wild-sheep-chase",
-    icon: renderIcon(BookOutline),
+    icon: renderIcon(GridOutline),
   },
   {
     label: "活动",
     key: "a-wild-sheep-chase",
-    icon: renderIcon(BookOutline),
+    icon: renderIcon(HappyOutline),
   },
 ];
 </script>

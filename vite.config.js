@@ -26,5 +26,14 @@ export default defineConfig({
                 additionalData: '@import "@/assets/main.scss";'
             }
         }
+    },
+    server: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:9501', // 所要代理的目标地址
+                rewrite: path => path.replace(/^\/api/, ''),
+                changeOrigin: true,
+            }
+        }
     }
 })

@@ -1,9 +1,10 @@
 <script setup>
-  import {NModal,NCard,NInput,NButton,NIcon,NGrid,NGi} from "naive-ui";
+  import {NModal,NSpin,NCard,NInput,NButton,NIcon,NGrid,NGi,NCheckbox} from "naive-ui";
   import {ref} from "vue";
   import {FingerPrintSharp,Person} from '@vicons/ionicons5';
   const showModal = ref(false);
   import {LogIn} from "@vicons/ionicons5";
+  import Geetest from "@/components/Geetest/Geetest.vue";
 </script>
 
 <template>
@@ -34,8 +35,21 @@
           <n-icon :component="FingerPrintSharp" />
         </template>
       </n-input>
-
-      <n-grid cols="2" style="padding-top: 15px">
+      <div class="login_tips">
+        <div class="checkbox">
+          <n-checkbox
+              checked
+          >
+            记住登录
+          </n-checkbox>
+        </div>
+        <div class="forget">
+          <router-link to="/forget" style="text-decoration: none">Forgot your password?</router-link>
+        </div>
+      </div>
+      <geetest style="padding-bottom: 10px;">
+      </geetest>
+      <n-grid cols="2">
         <n-gi style="padding-right: 5px">
           <n-button block>注册</n-button>
         </n-gi>
@@ -51,5 +65,17 @@
 .login_card {
   width: 380px;
   margin-top: 70px;
+}
+.login_tips {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.login_tips .checkbox{
+  justify-content: flex-start;
+}
+.login_tips .forget {
+  justify-content: flex-end;
 }
 </style>
