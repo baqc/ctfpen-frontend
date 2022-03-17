@@ -9,5 +9,4 @@ import {NLoadingBarProvider} from 'naive-ui';</script>
 </template>
 
 <style lang="scss">
-@import "@/assets/layout.scss";
 </style>

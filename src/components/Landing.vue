@@ -11,7 +11,6 @@ import {NButton} from 'naive-ui';</script>
               <div class="logo">
                 <img alt="" class="header_logo" src="https://www.naiveui.com/assets/naivelogo.93278402.svg">
               </div>
-              <br>
               <h1 class="title">随时随地分享你的题目</h1>
               <p class="subtitle">
                 在线编写，容器分配，排行统计，比赛实况，解题思路，学习交流，均在这里。
@@ -21,11 +20,11 @@ import {NButton} from 'naive-ui';</script>
                     color="green"
                     size="large"
                     style="margin-right: 5px"
-                >ButtonButton
+                >注册平台
                 </n-button>
                 <n-button
                     size="large"
-                >ButtonButton
+                >联系我们
                 </n-button>
               </p>
             </div>
@@ -40,20 +39,19 @@ import {NButton} from 'naive-ui';</script>
 </template>
 
 <style lang="scss" scoped>
-@import "bootstrap/scss/bootstrap-grid.scss";
-
 #header {
-  padding-top: 10px;
+  padding-top: 20px;
   border: solid 1px rgb(239, 239, 245);
 }
 
 .title {
   font-size: 37px;
-  line-height: 0.4;
+  //line-height: 0.4;
   font-weight: 500 !important;
 }
 
 .subtitle {
+  margin-top: -20px;
   font-size: 24px;
   line-height: 1.39;
   color: #86868b;
@@ -74,7 +72,7 @@ import {NButton} from 'naive-ui';</script>
     width: 100%;
   }
   .title {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
   }
 }
 
