@@ -1,15 +1,15 @@
 <script setup>
-import { NLayout,NLayoutContent, useLoadingBar} from 'naive-ui';
+import {RouterView} from 'vue-router'
 import {onMounted} from "vue";
 import {loadingBarApiRef} from "@/router";
+import {NLayout, NLayoutContent, NLayoutFooter, useLoadingBar} from 'naive-ui'
 import AppHeader from "@/components/AppHeader.vue"
-import Landing from "@/components/Landing.vue"
 
 const loadingBar = useLoadingBar()
 
 onMounted(() => {
   loadingBarApiRef.value = loadingBar;
-  loadingBar.finish();
+  // loadingBar.finish();
 })
 </script>
 
@@ -17,8 +17,14 @@ onMounted(() => {
   <n-layout>
     <app-header></app-header>
     <n-layout-content>
-      <landing></landing>
+      <router-view></router-view>
     </n-layout-content>
+    <n-layout-footer style="background-color: red;padding: 10px;color: white;text-align: center;font-size: 24px">
+      footer
+    </n-layout-footer>
   </n-layout>
 </template>
 
+<style scoped>
+
+</style>

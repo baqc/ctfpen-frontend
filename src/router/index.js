@@ -12,17 +12,17 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'home',
+      component: HomeView,
+      meta: {
+        title: '主页',
+        auth: false
+      }
+    },
+    {
+      path: '/',
       component: DefaultLayout,
       children: [
-        {
-          path: '',
-          name: 'home',
-          component: HomeView,
-          meta: {
-            title: '主页',
-            auth: false
-          }
-        },
         {
           path: 'knowledge',
           name: 'knowledge',

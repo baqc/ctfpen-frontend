@@ -9,7 +9,7 @@ const loadingBar = useLoadingBar()
 
 onMounted(() => {
   loadingBarApiRef.value = loadingBar;
-  loadingBar.finish();
+  // loadingBar.finish();
 })
 </script>
 
