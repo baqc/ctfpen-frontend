@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import NotFoundView from "@/views/NotFoundView.vue";
 const HomeView = () => import ('@/views/HomeView.vue');
-const KnowLedgeView = () => import ('@/views/KnowLedgeView.vue');
+const KnowledgeView = () => import ('@/views/KnowledgeView.vue');
 const AccountView = () => import ('@/views/AccountView.vue');
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 
@@ -26,7 +26,7 @@ const router = createRouter({
         {
           path: 'knowledge',
           name: 'knowledge',
-          component: KnowLedgeView,
+          component: KnowledgeView,
           meta: {
             title: '资料库',
             auth: false
