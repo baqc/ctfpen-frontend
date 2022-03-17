@@ -1,5 +1,5 @@
 <script setup>
-import { NLayout,NLayoutContent, useLoadingBar} from 'naive-ui';
+import {NLayout, NLayoutContent, useLoadingBar} from 'naive-ui';
 import {onMounted} from "vue";
 import {loadingBarApiRef} from "@/router";
 import AppHeader from "@/components/AppHeader.vue"

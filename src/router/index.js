@@ -1,9 +1,10 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import NotFoundView from "@/views/NotFoundView.vue";
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
+
 const HomeView = () => import ('@/views/HomeView.vue');
 const KnowledgeView = () => import ('@/views/KnowledgeView.vue');
 const AccountView = () => import ('@/views/AccountView.vue');
-import DefaultLayout from "@/layouts/DefaultLayout.vue";
 
 export const loadingBarApiRef = {}
 

@@ -1,16 +1,15 @@
 <script setup>
-import { NButton} from 'naive-ui';
-</script>
+import {NButton} from 'naive-ui';</script>
 
 <template>
   <div class="landing text-center">
-  <section id="header">
+    <section id="header">
       <div class="container">
         <div class="header">
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="logo">
-                <img src="https://www.naiveui.com/assets/naivelogo.93278402.svg" class="header_logo" alt="">
+                <img alt="" class="header_logo" src="https://www.naiveui.com/assets/naivelogo.93278402.svg">
               </div>
               <br>
               <h1 class="title">随时随地分享你的题目</h1>
@@ -19,17 +18,19 @@ import { NButton} from 'naive-ui';
               </p>
               <p style="padding-top: 4px">
                 <n-button
+                    color="green"
                     size="large"
                     style="margin-right: 5px"
-                    color="green"
-                >ButtonButton</n-button>
+                >ButtonButton
+                </n-button>
                 <n-button
                     size="large"
-                >ButtonButton</n-button>
+                >ButtonButton
+                </n-button>
               </p>
             </div>
             <div class="col-5 col-md-6">
-              <img src="@/assets/images/img.png" class="header_image">
+              <img class="header_image" src="@/assets/images/img.png">
             </div>
           </div>
         </div>
@@ -38,12 +39,14 @@ import { NButton} from 'naive-ui';
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "bootstrap/scss/bootstrap-grid.scss";
+
 #header {
   padding-top: 10px;
   border: solid 1px rgb(239, 239, 245);
 }
+
 .title {
   font-size: 37px;
   line-height: 0.4;
@@ -55,9 +58,11 @@ import { NButton} from 'naive-ui';
   line-height: 1.39;
   color: #86868b;
 }
+
 .title_btn {
   padding-top: 26px;
 }
+
 @media screen and (max-width: $breakpoints-md) {
   .header_image {
     display: none;
@@ -68,13 +73,13 @@ import { NButton} from 'naive-ui';
   .header_image {
     width: 100%;
   }
-  .title{
+  .title {
     font-size: 3.5rem;
   }
 }
 
 .header_logo {
-  height: 80px!important;
+  height: 80px !important;
 }
 </style>
 

@@ -1,11 +1,10 @@
 <script setup>
-  import {NModal,NCard,NInput,NButton,NIcon,NGrid,NGi,NCheckbox} from "naive-ui";
-  import {ref} from "vue";
-  import {FingerPrintSharp,Person} from '@vicons/ionicons5';
-  const showModal = ref(false);
-  import {LogIn} from "@vicons/ionicons5";
-  import Geetest from "@/components/Geetest/Geetest.vue";
-</script>
+import {NButton, NCard, NCheckbox, NGi, NGrid, NIcon, NInput, NModal} from "naive-ui";
+import {ref} from "vue";
+import {FingerPrintSharp, LogIn, Person} from '@vicons/ionicons5';
+import Geetest from "@/components/Geetest/Geetest.vue";
+
+const showModal = ref(false);</script>
 
 <template>
   <n-button color="#18a058" v-on:click="showModal = true">
@@ -16,23 +15,23 @@
   </n-button>
   <n-modal v-model:show="showModal" transform-origin="center">
     <n-card
-        closable
-        v-on:close="showModal = false"
+        aria-modal="true"
         class="login_card"
-        title="登录 / 注册"
+        closable
         role="dialog"
         size="medium"
-        aria-modal="true"
+        title="登录 / 注册"
+        v-on:close="showModal = false"
     >
 
-      <n-input type="text" placeholder="用户名">
+      <n-input placeholder="用户名" type="text">
         <template #prefix>
-          <n-icon :component="Person" />
+          <n-icon :component="Person"/>
         </template>
       </n-input>
-      <n-input style="margin-top: 10px" type="text" placeholder="密码">
+      <n-input placeholder="密码" style="margin-top: 10px" type="text">
         <template #prefix>
-          <n-icon :component="FingerPrintSharp" />
+          <n-icon :component="FingerPrintSharp"/>
         </template>
       </n-input>
       <div class="login_tips">
@@ -44,7 +43,7 @@
           </n-checkbox>
         </div>
         <div class="forget">
-          <router-link to="/forget" style="text-decoration: none">Forgot your password?</router-link>
+          <router-link style="text-decoration: none" to="/forget">Forgot your password?</router-link>
         </div>
       </div>
       <geetest style="padding-bottom: 10px;">
@@ -66,15 +65,18 @@
   width: 380px;
   margin-top: 70px;
 }
+
 .login_tips {
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
-.login_tips .checkbox{
+
+.login_tips .checkbox {
   justify-content: flex-start;
 }
+
 .login_tips .forget {
   justify-content: flex-end;
 }

@@ -1,5 +1,5 @@
 <script setup>
-import {NResult, NButton, useLoadingBar} from "naive-ui";
+import {NButton, NResult, useLoadingBar} from "naive-ui";
 import {onMounted} from "vue";
 import {loadingBarApiRef} from "@/router";
 
@@ -13,7 +13,7 @@ onMounted(() => {
 
 <template>
   <div class="notfound_page">
-    <n-result status="404" title="404 资源不存在" description="生活总归带点荒谬">
+    <n-result description="生活总归带点荒谬" status="404" title="404 资源不存在">
       <template v-slot:footer>
         <n-button>找点乐子吧</n-button>
       </template>

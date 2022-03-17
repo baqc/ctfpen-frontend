@@ -1,7 +1,15 @@
 <script setup>
-import {NButton, NButtonGroup, NDropdown, NIcon, NLayoutHeader, NMenu} from "naive-ui";
+import {NButton, NDropdown, NIcon, NLayoutHeader, NMenu} from "naive-ui";
 import {h, ref} from "vue";
-import {BookOutline, MenuOutline,BarChartOutline,HomeOutline,FootstepsOutline,GridOutline,HappyOutline} from "@vicons/ionicons5";
+import {
+  BarChartOutline,
+  BookOutline,
+  FootstepsOutline,
+  GridOutline,
+  HappyOutline,
+  HomeOutline,
+  MenuOutline
+} from "@vicons/ionicons5";
 import renderIcon from "../utils/renderIcon";
 import {RouterLink} from 'vue-router';
 import LoginModal from "../components/LoginModal.vue";
@@ -115,23 +123,21 @@ const name = ref(router.currentRoute.value.name);
       <h3 class="title">CTF Pen</h3>
       <n-menu
           v-model:options="menuOptions"
+          v-model:value="name"
           class="menu"
           mode="horizontal"
-          v-model:value="name"
       ></n-menu>
 
       <div class="action">
-        <n-button-group>
-          <login-modal/>
-          <n-button class="register-btn" color="#18a058" ghost>
-            <template v-slot:icon>
-              <n-icon>
-                <book-outline/>
-              </n-icon>
-            </template>
-            注册
-          </n-button>
-        </n-button-group>
+        <login-modal/>
+        <n-button class="register-btn" color="#18a058" ghost>
+          <template v-slot:icon>
+            <n-icon>
+              <book-outline/>
+            </n-icon>
+          </template>
+          注册
+        </n-button>
       </div>
 
     </div>
@@ -168,6 +174,10 @@ const name = ref(router.currentRoute.value.name);
   line-height: 1.75;
   font-size: 14px;
   cursor: pointer;
+}
+
+.register-btn {
+  margin-left: 4px;
 }
 
 @media screen and (max-width: $breakpoints-md) {

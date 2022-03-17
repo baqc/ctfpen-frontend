@@ -1,8 +1,7 @@
 <script setup>
-import {useLoadingBar} from "naive-ui";
+import {NAvatar, NCard, NGrid, NGridItem, useLoadingBar} from "naive-ui";
 import {onMounted} from "vue";
 import {loadingBarApiRef} from "@/router";
-import {NCard,NAvatar,NGrid,NGridItem} from "naive-ui";
 
 const loadingBar = useLoadingBar()
 
@@ -66,6 +65,7 @@ onMounted(() => {
   box-sizing: inherit;
   padding-top: 10px;
 }
+
 .level-item {
   align-items: center;
   display: flex;
@@ -74,11 +74,13 @@ onMounted(() => {
   flex-shrink: 0;
   justify-content: center;
 }
+
 .avatar {
   flex-grow: 1;
   flex-shrink: 1 !important;
   text-align: center;
 }
+
 .avatar .username {
   line-height: 1.125;
   margin-bottom: 0;
@@ -88,7 +90,8 @@ onMounted(() => {
   display: block !important;
   word-break: break-word;
 }
-.avatar .subtitle{
+
+.avatar .subtitle {
   display: block !important;
   font-size: 1rem !important;
   margin: 0;
@@ -103,29 +106,34 @@ onMounted(() => {
   padding: 0;
   box-sizing: inherit;
 }
+
 .data {
   flex-grow: 1;
-  margin: 0!important;
+  margin: 0 !important;
   text-align: center;
   box-sizing: inherit;
 }
+
 .profile_data {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.heading{
+
+.heading {
   display: block;
   font-size: 13px;
   letter-spacing: 1px;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
-.title{
+
+.title {
   color: #363636;
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.125;
 }
+
 .user_cover {
   border-top-right-radius: 1px;
   border-top-left-radius: 1px;
