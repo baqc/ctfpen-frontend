@@ -45,13 +45,14 @@ import {NButton} from 'naive-ui';</script>
 }
 
 .title {
+  margin-top: -2px;
   font-size: 37px;
   //line-height: 0.4;
   font-weight: 500 !important;
 }
 
 .subtitle {
-  margin-top: -20px;
+  margin-top: -25px;
   font-size: 24px;
   line-height: 1.39;
   color: #86868b;

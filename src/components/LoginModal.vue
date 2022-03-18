@@ -2,7 +2,6 @@
 import {NButton, NCard, NCheckbox, NGi, NGrid, NIcon, NInput, NModal} from "naive-ui";
 import {ref} from "vue";
 import {FingerPrintSharp, LogIn, Person} from '@vicons/ionicons5';
-import Geetest from "@/components/Geetest/Geetest.vue";
 
 const showModal = ref(false);</script>
 
@@ -46,8 +45,6 @@ const showModal = ref(false);</script>
           <router-link style="text-decoration: none" to="/forget">Forgot your password?</router-link>
         </div>
       </div>
-      <geetest style="padding-bottom: 10px;">
-      </geetest>
       <n-grid cols="2">
         <n-gi style="padding-right: 5px">
           <n-button block>注册</n-button>

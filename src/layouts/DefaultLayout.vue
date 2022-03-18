@@ -17,7 +17,7 @@ onMounted(() => {
   <n-layout>
     <app-header></app-header>
     <n-layout-content content-style="background-color: #fafafc;min-height: 94vh!important">
-      <div class="container">
+      <div class="container-fluid">
         <router-view></router-view>
       </div>
     </n-layout-content>
@@ -27,6 +27,9 @@ onMounted(() => {
   </n-layout>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import "bootstrap/scss/containers";
+.container{
+   padding-top: 12px;
+}
 </style>

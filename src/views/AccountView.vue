@@ -1,5 +1,5 @@
 <script setup>
-import {NAvatar, NCard, NGrid, NGridItem, useLoadingBar} from "naive-ui";
+import {NAvatar, NCard, useLoadingBar} from "naive-ui";
 import {onMounted} from "vue";
 import {loadingBarApiRef} from "@/router";
 
@@ -13,8 +13,8 @@ onMounted(() => {
 
 <template>
   <div class="account">
-    <n-grid cols="4" item-responsive responsive="screen">
-      <n-grid-item span="4 m:4 l:1">
+    <div class="row">
+      <div class="col-12 col-md-4">
         <div class="profile">
           <n-card>
             <div class="level">
@@ -52,12 +52,18 @@ onMounted(() => {
             </div>
           </n-card>
         </div>
-      </n-grid-item>
-    </n-grid>
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="history">
+
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/assets/grid";
 .level {
   display: flex;
   align-items: center;
