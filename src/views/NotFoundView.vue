@@ -9,13 +9,16 @@ onMounted(() => {
   loadingBarApiRef.value = loadingBar;
   loadingBar.finish();
 })
+const handleBack = () => {
+  window.history.back();
+}
 </script>
 
 <template>
   <div class="notfound_page">
     <n-result description="生活总归带点荒谬" status="404" title="404 资源不存在">
       <template v-slot:footer>
-        <n-button>找点乐子吧</n-button>
+        <n-button v-on:click="handleBack">找点乐子吧</n-button>
       </template>
     </n-result>
   </div>
