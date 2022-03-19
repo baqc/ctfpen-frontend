@@ -39,6 +39,8 @@ import {NButton} from 'naive-ui';</script>
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/grid.scss";
+
 #header {
   padding-top: 20px;
   border: solid 1px rgb(239, 239, 245);

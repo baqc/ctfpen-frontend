@@ -5,7 +5,7 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 const HomeView = () => import ('@/views/HomeView.vue');
 const KnowledgeView = () => import ('@/views/KnowledgeView.vue');
 const AccountView = () => import ('@/views/AccountView.vue');
-
+const ChallengesView = () => import('@/views/ChallengesView.vue');
 export const loadingBarApiRef = {}
 
 const router = createRouter({
@@ -13,23 +13,32 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
-      meta: {
-        title: '主页',
-        auth: false
-      }
-    },
-    {
-      path: '/',
       component: DefaultLayout,
       children: [
+        {
+          path: '',
+          name: 'home',
+          component: HomeView,
+          meta: {
+            title: '主页',
+            auth: false
+          }
+        },
         {
           path: 'knowledge',
           name: 'knowledge',
           component: KnowledgeView,
           meta: {
             title: '资料库',
+            auth: false
+          }
+        },
+        {
+          path: 'challenges',
+          name: 'challenges',
+          component: ChallengesView,
+          meta: {
+            title: '挑战',
             auth: false
           }
         },

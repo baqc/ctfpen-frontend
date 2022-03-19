@@ -12,11 +12,13 @@ onMounted(() => {
 </script>
 
 <template>
+<div class="container">
   <h1>
     test page
   </h1>
+</div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import "@/assets/grid.scss";
 </style>

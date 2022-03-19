@@ -7,6 +7,3 @@ import {NLoadingBarProvider} from 'naive-ui';</script>
     <router-view></router-view>
   </n-loading-bar-provider>
 </template>
-
-<style lang="scss">
-</style>

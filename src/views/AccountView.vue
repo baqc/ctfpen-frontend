@@ -13,49 +13,51 @@ onMounted(() => {
 
 <template>
   <div class="account">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <div class="profile">
-          <n-card>
-            <div class="level">
-              <div class="level-item avatar">
-                <div>
-                  <n-avatar
-                      :size="128"
-                      src="https://q4.qlogo.cn/g?b=qq&nk=956587861&s=0"
-                  />
-                  <p class="username">ZERO</p>
-                  <p class="subtitle">困于江湖，我一人足矣</p>
-                  <p class="space">Space</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="profile">
+            <n-card>
+              <div class="level">
+                <div class="level-item avatar">
+                  <div>
+                    <n-avatar
+                        :size="128"
+                        src="https://q4.qlogo.cn/g?b=qq&nk=956587861&s=0"
+                    />
+                    <p class="username">ZERO</p>
+                    <p class="subtitle">困于江湖，我一人足矣</p>
+                    <p class="space">Space</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="level profile_data">
-              <div class="level-item data">
-                <div>
-                  <div class="heading">文章</div>
-                  <div class="title">2</div>
+              <div class="level profile_data">
+                <div class="level-item data">
+                  <div>
+                    <div class="heading">文章</div>
+                    <div class="title">2</div>
+                  </div>
+                </div>
+                <div class="level-item data">
+                  <div>
+                    <div class="heading">文章</div>
+                    <div class="title">2</div>
+                  </div>
+                </div>
+                <div class="level-item data">
+                  <div>
+                    <div class="heading">文章</div>
+                    <div class="title">2</div>
+                  </div>
                 </div>
               </div>
-              <div class="level-item data">
-                <div>
-                  <div class="heading">文章</div>
-                  <div class="title">2</div>
-                </div>
-              </div>
-              <div class="level-item data">
-                <div>
-                  <div class="heading">文章</div>
-                  <div class="title">2</div>
-                </div>
-              </div>
-            </div>
-          </n-card>
+            </n-card>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-md-8">
-        <div class="history">
+        <div class="col-12 col-md-8">
+          <div class="history">
 
+          </div>
         </div>
       </div>
     </div>
@@ -63,7 +65,8 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/grid";
+@import "@/assets/grid.scss";
+
 .level {
   display: flex;
   align-items: center;

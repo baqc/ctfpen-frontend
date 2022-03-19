@@ -13,5 +13,5 @@ $modal-lg: $breakpoints-lg;
 $modal-xl: $breakpoints-xl;
 $modal-xxl: $breakpoints-xxl;
 
-@import "grid";
+//@import "bootstrap/dist/bootstrap-grid.css";
 /** 唉 这个地方栅格和 naiveui 的还不统一 也不知道这样可不可以 结果 landing 的效果就很差 如果开源出去 请勿喷 (( 在学了 在学了 **/
