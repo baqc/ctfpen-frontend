@@ -6,7 +6,6 @@ import {
   BookOutline,
   FootstepsOutline,
   GridOutline,
-  HappyOutline,
   HomeOutline,
   MenuOutline
 } from "@vicons/ionicons5";
@@ -50,23 +49,46 @@ const menuOptions = [
     icon: renderIcon(FootstepsOutline),
     children: [
       {
-        label: "WEB",
+        label: () => h(RouterLink, {
+          to: {
+            name: 'challenges'
+          }
+        }, {default: () => 'WEB'}),
         key: "WEB"
       },
       {
-        label: "Pwn",
+
+        label: () => h(RouterLink, {
+          to: {
+            name: 'challenges'
+          }
+        }, {default: () => 'Pwn'}),
         key: "Pwn"
       },
       {
-        label: "Reverse",
+
+        label: () => h(RouterLink, {
+          to: {
+            name: 'challenges'
+          }
+        }, {default: () => 'Reverse'}),
         key: "Reverse"
       },
       {
-        label: "Crypto",
+
+        label: () => h(RouterLink, {
+          to: {
+            name: 'challenges'
+          }
+        }, {default: () => 'Crypto'}),
         key: "Crypto"
       },
       {
-        label: "Misc",
+        label: () => h(RouterLink, {
+          to: {
+            name: 'challenges'
+          }
+        }, {default: () => 'Misc'}),
         key: "Misc"
       }
     ]
@@ -80,21 +102,20 @@ const menuOptions = [
     key: "knowledge",
     icon: renderIcon(GridOutline),
   },
+    /* 这个不紧急 */
+  // {
+  //   label: "活动(测试工具)",
+  //   key: "activity",
+  //   icon: renderIcon(HappyOutline),
+  // },
   {
-    label: "活动(测试工具)",
-    key: "activity",
-    icon: renderIcon(HappyOutline),
-    children: [
-      {
-        label: () => h(RouterLink, {
-          to: {
-            name: 'account'
-          }
-        }, {default: () => '用户中心'}),
-        key: "account",
-        icon: renderIcon(HomeOutline),
-      },
-    ]
+    label: () => h(RouterLink, {
+      to: {
+        name: 'account'
+      }
+    }, {default: () => '用户中心'}),
+    key: "account",
+    icon: renderIcon(HomeOutline),
   },
 ];
 const name = ref(router.currentRoute.value.name);

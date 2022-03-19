@@ -5,7 +5,7 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 const HomeView = () => import ('@/views/HomeView.vue');
 const KnowledgeView = () => import ('@/views/KnowledgeView.vue');
 const AccountView = () => import ('@/views/AccountView.vue');
-const ChallengesView = () => import('@/views/ChallengesView.vue');
+// const ChallengesView = () => import('@/views/ChallengesView.vue');
 export const loadingBarApiRef = {}
 
 const router = createRouter({
@@ -33,15 +33,15 @@ const router = createRouter({
             auth: false
           }
         },
-        {
-          path: 'challenges',
-          name: 'challenges',
-          component: ChallengesView,
-          meta: {
-            title: '挑战',
-            auth: false
-          }
-        },
+        // {
+        //   path: 'challenges',
+        //   name: 'challenges',
+        //   component: ChallengesView,
+        //   meta: {
+        //     title: '挑战',
+        //     auth: false
+        //   }
+        // },
         {
           path: 'account',
           name: 'account',
@@ -51,16 +51,16 @@ const router = createRouter({
             auth: true
           }
         },
+        {
+          path: '/:pathMatch(.*)',
+          component: NotFoundView,
+          meta: {
+            title: '页面无法找到',
+            auth: false
+          }
+        }
       ]
     },
-    {
-      path: '/:pathMatch(.*)',
-      component: NotFoundView,
-      meta: {
-        title: '页面无法找到',
-        auth: false
-      }
-    }
   ]
 })
 
